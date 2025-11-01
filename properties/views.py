@@ -8,6 +8,7 @@ from django.views.decorators.csrf import csrf_exempt
 from rest_framework.decorators import api_view
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
+from django.http import JsonResponse
 # Create your views here.
 
 
@@ -16,4 +17,4 @@ from rest_framework.response import Response
 def property_list(request):
   property = Property.objects.all()
   serialized = PropertySerializer(property, many=True)
-  return Response(serialized.data)
+  return JsonResponse(serialized.data, safe=False)
