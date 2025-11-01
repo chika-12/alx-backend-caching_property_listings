@@ -17,4 +17,4 @@ from django.http import JsonResponse
 def property_list(request):
   property = Property.objects.all()
   serialized = PropertySerializer(property, many=True)
-  return JsonResponse(serialized.data, safe=False)
+  return JsonResponse({"data":serialized.data})
