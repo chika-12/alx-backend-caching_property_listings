@@ -87,7 +87,7 @@ DATABASES = {
         "USER": verify_os_variables('DB_USER'),
         "PASSWORD": verify_os_variables('DB_PASSWORD'),
         "HOST": verify_os_variables('DB_HOST'),
-        "PORT": verify_os_variables('DB_PORT')
+        "PORT": 5432
     }
 }
 
