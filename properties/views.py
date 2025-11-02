@@ -9,12 +9,13 @@ from rest_framework.decorators import api_view
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from django.http import JsonResponse
+from .utils import get_all_properties
 # Create your views here.
 
 
 @api_view(["GET"])
-@cache_page(60 * 15)
+#@cache_page(60 * 15)
 def property_list(request):
-  property = Property.objects.all()
-  serialized = PropertySerializer(property, many=True)
-  return JsonResponse({"data":serialized.data})
+  data = get_all_properties()
+  return data
+  
