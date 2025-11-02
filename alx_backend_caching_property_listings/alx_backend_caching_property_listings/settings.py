@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
-from properties.utilities import verify_os_variables
+from properties.utils import verify_os_variables
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.

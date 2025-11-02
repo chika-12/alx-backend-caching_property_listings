@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "properties",
+    "properties.app.PropertiesConfig",
     "rest_framework",
     "graphene_django",
     "django_redis"

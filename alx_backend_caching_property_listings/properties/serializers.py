@@ -1,6 +1,6 @@
 from rest_framework import serializers
-
+from properties.views import Property
 class PropertySerializer(serializers.ModelSerializer):
   class Meta:
-    model = property
+    model = Property
     fields = "__all__"
