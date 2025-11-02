@@ -5,9 +5,9 @@ from .models import Property
 
 @receiver(post_save, sender=Property)
 def clear_cache_on_save(sender, instance, **kwarg):
-  cache.delete("property_list")
+  cache.delete("all_properties")
   print("Cache cleared after proprty save")
 
 @receiver(post_delete, sender=Property)
 def clear_cache_on_delete(sender, instance, **kwarg):
-  cache.delete("property_list")
+  cache.delete("all_properties")
